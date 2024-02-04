@@ -50,7 +50,7 @@ const getLargestString  = (arr) =>{
    return `The largest string is ${largestString} and the index no is ${arr.indexOf(largestString)}`
 }
 
-console.log(getLargestString(arrString))
+// console.log(getLargestString(arrString))
 
 const arr = [25,36,100,7,8,22,1,55,99,88,102,12,105]
 
@@ -69,7 +69,7 @@ for(let i=1; i<arr.length; i++){
         // console.log(largestNumber)
     }
 }
-console.log(`largest numer is ${largestNumber}`)
+// console.log(`largest numer is ${largestNumber}`)
 
 // find smallest number 
 let smallestNumber = arr[0];
@@ -79,8 +79,84 @@ for(let i=1; i<arr.length; i++){
         // console.log(smallestNumber)
     }
 }
-console.log(`smallest number is ${smallestNumber}`)
+// console.log(`smallest number is ${smallestNumber}`)
 
+
+// form 1 to 100 divided by 3-5 or both 3 and 5 fizzBuzz
+const findFizzBuzz = (n)=>{
+    for(let i=1; i<=n; i++){
+         if(i % 3 === 0 && i % 5 === 0){
+            console.log(`${i} fizzBuzz`)
+        }else if(i % 3 === 0){
+            console.log(`${i} fizz`)
+        }
+        else if(i % 5 === 0){
+            console.log(`${i} buzz`)
+        }
+        else{
+            console.log(`${i} not fizzBuzz`)
+        }
+    }
+}
+
+// findFizzBuzz(100)
+
+
+// remove falsy value from array
+
+// const value = [1,2,3,null,'test',undefined,'',0,NaN,false]
+// const removeFalsyValue = (arr) =>{
+//     let mainValue;
+//     let trutyValue = []
+//     for(let i=0; i<arr.length; i++){
+//         mainValue = Boolean(arr[i])
+//         if(mainValue === true){
+//             trutyValue.push(arr[i])
+//         }
+//     }
+//     return trutyValue
+// }
+// console.log(removeFalsyValue(value))
+
+
+const value = [1,2,3,null,'test',undefined,'',0,NaN,false]
+const removeFalsyValue = (arr) =>{
+    let trutyValue = []
+    for(let i=0; i<arr.length; i++){
+        if(Boolean(arr[i]) === true){
+            trutyValue.push(arr[i])
+        }
+    }
+    return trutyValue
+}
+// console.log(removeFalsyValue(value))
+
+const objValue = {
+    a:'123',
+    b:1,
+    c:100,
+    d:null,
+    e:undefined,
+    f:0,
+}
+// const removeFalsyValueFromObj = (obj) =>{
+//    for(let s in obj){
+//     if(Boolean(obj[s]) === true){
+//         console.log(obj[s])
+//     }
+//    }
+// }
+// removeFalsyValueFromObj(objValue);
+
+const removeFalsyValueFromObj = (obj) =>{
+   for(let s in obj){
+    if(!obj[s]){
+        delete obj[s]
+    }
+   }
+   return obj
+}
+console.log(removeFalsyValueFromObj(objValue));
 
 
   
