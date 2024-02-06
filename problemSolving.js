@@ -156,7 +156,9 @@ const removeFalsyValueFromObj = (obj) =>{
    }
    return obj
 }
-console.log(removeFalsyValueFromObj(objValue));
+// console.log(removeFalsyValueFromObj(objValue));
+
+
 
 
   
