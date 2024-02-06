@@ -1,5 +1,5 @@
 const paymentSuccess = true;
-const marks = Math.floor(prompt('Enter your marks'));
+// const marks = Math.floor(prompt('Enter your marks'));
 const enroll = (callback) =>{
     console.log('Course enrollment is on progress..')
 
@@ -30,6 +30,6 @@ const certificate = () =>{
         console.log('Congrats! on your brilliant success')
     },1000);
 }
-enroll(()=>{
-   progress(certificate)
-})
+// enroll(()=>{
+//    progress(certificate)
+// })
